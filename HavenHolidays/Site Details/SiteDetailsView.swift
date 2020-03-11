@@ -66,7 +66,7 @@ class SiteDetailsView: UIViewController {
 		return "Unknown error"
 	}
 	
-	private func minutesToCaravan(for Route:Routes, caravanId:AccomadationId) -> Int? {
+	private func minutesToCaravan(for Route:Routes, caravanId:CaravanId) -> Int? {
 		// TO DO: Move this to View model
 		if let routeMins = site.routes[Route]?.firstIndex(of: caravanId) {
 			return routeMins + 1

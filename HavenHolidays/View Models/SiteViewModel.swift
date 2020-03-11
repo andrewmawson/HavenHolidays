@@ -7,11 +7,13 @@
 //
 
 import Foundation
-typealias AccomadationId = Int
+
+typealias CaravanId = Int
+
 struct SiteViewModel {
 	let title:String
 	let dataURL:URL
-	let routes:[Routes:[AccomadationId]]
+	let routes:[Routes:[CaravanId]]
 }
 
 enum Routes {
