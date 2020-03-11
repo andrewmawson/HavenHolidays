@@ -10,6 +10,13 @@ import Foundation
 
 typealias CaravanId = Int
 
+enum Routes {
+	case unknown
+	case clockWise
+	case antiClockWise
+	case central
+}
+
 struct SiteViewModel {
 	let title:String
 	let dataURL:URL
@@ -46,11 +53,4 @@ struct SiteViewModel {
 		}
 		
 	}
-}
-
-enum Routes {
-	case unknown
-	case clockWise
-	case antiClockWise
-	case central
 }
