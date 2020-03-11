@@ -1,5 +1,5 @@
 //
-//  GroupViewModel.swift
+//  GroupsViewModel.swift
 //  HavenHolidays
 //
 //  Created by K10 on 11/03/2020.
@@ -8,8 +8,7 @@
 
 import Foundation
 
-struct GroupViewModel:Decodable {
-	let familyid:Int
-	let groupsize:Int
-	let caravan:Int
+struct GroupsViewModel {
+	let groups:[GroupViewModel]
 }
+

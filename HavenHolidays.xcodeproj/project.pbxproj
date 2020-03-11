@@ -31,6 +31,7 @@
 		01D4F4EE2419440500A18803 /* SiteViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 01D4F4ED2419440500A18803 /* SiteViewModel.swift */; };
 		01D4F4F12419446100A18803 /* GroupViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 01D4F4F02419446100A18803 /* GroupViewModel.swift */; };
 		01E19C5824194D7D0096ADAE /* NetworkService.swift in Sources */ = {isa = PBXBuildFile; fileRef = 01E19C5724194D7D0096ADAE /* NetworkService.swift */; };
+		01E19C5A2419527C0096ADAE /* GroupsViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 01E19C592419527C0096ADAE /* GroupsViewModel.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -81,6 +82,7 @@
 		01D4F4ED2419440500A18803 /* SiteViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SiteViewModel.swift; sourceTree = "<group>"; };
 		01D4F4F02419446100A18803 /* GroupViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = GroupViewModel.swift; sourceTree = "<group>"; };
 		01E19C5724194D7D0096ADAE /* NetworkService.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NetworkService.swift; sourceTree = "<group>"; };
+		01E19C592419527C0096ADAE /* GroupsViewModel.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = GroupsViewModel.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -204,6 +206,7 @@
 			children = (
 				01D4F4ED2419440500A18803 /* SiteViewModel.swift */,
 				01D4F4F02419446100A18803 /* GroupViewModel.swift */,
+				01E19C592419527C0096ADAE /* GroupsViewModel.swift */,
 			);
 			path = "View Models";
 			sourceTree = "<group>";
@@ -347,6 +350,7 @@
 				01D4F4DF2419425300A18803 /* SiteService.swift in Sources */,
 				01D4F4DB2419420D00A18803 /* SiteDetailsView.swift in Sources */,
 				01E19C5824194D7D0096ADAE /* NetworkService.swift in Sources */,
+				01E19C5A2419527C0096ADAE /* GroupsViewModel.swift in Sources */,
 				01D4F495241941C700A18803 /* AppDelegate.swift in Sources */,
 				01D4F4D92419420D00A18803 /* SiteDetailsProtocols.swift in Sources */,
 				01D4F4DA2419420D00A18803 /* SiteDetailsInteractor.swift in Sources */,
