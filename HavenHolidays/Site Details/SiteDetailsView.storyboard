@@ -1,18 +1,15 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="14109" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" colorMatched="YES">
-    <device id="retina4_7" orientation="portrait">
-        <adaptation id="fullscreen"/>
-    </device>
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="15702" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" colorMatched="YES">
+    <device id="retina4_7" orientation="portrait" appearance="light"/>
     <dependencies>
-        <deployment identifier="iOS"/>
-        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="14088"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="15704"/>
         <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
     </dependencies>
     <scenes>
-        <!--SiteDetails View-->
+        <!--Site Details View-->
         <scene sceneID="IDx-lO-hJY">
             <objects>
-                <viewController storyboardIdentifier="SiteDetailsView" useStoryboardIdentifierAsRestorationIdentifier="YES" id="4dR-W0-s9t" customClass="SiteDetailsView" customModule="SafeToNet" customModuleProvider="target" sceneMemberID="viewController">
+                <viewController storyboardIdentifier="SiteDetailsView" useStoryboardIdentifierAsRestorationIdentifier="YES" id="4dR-W0-s9t" customClass="SiteDetailsView" customModule="HavenHolidays" customModuleProvider="target" sceneMemberID="viewController">
                     <layoutGuides>
                         <viewControllerLayoutGuide type="top" id="WYt-5X-GRX"/>
                         <viewControllerLayoutGuide type="bottom" id="KLE-Ff-ZNf"/>
@@ -20,8 +17,61 @@
                     <view key="view" contentMode="scaleToFill" id="TSs-c3-zJl">
                         <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <stackView opaque="NO" contentMode="scaleToFill" axis="vertical" spacing="10" translatesAutoresizingMaskIntoConstraints="NO" id="sMG-50-1Uy">
+                                <rect key="frame" x="39.5" y="236.5" width="296.5" height="194"/>
+                                <subviews>
+                                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Camp Supervisor" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="v9k-bw-0sZ">
+                                        <rect key="frame" x="0.0" y="0.0" width="296.5" height="24"/>
+                                        <fontDescription key="fontDescription" name="HiraMinProN-W3" family="Hiragino Mincho ProN" pointSize="24"/>
+                                        <nil key="textColor"/>
+                                        <nil key="highlightedColor"/>
+                                    </label>
+                                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="RIe-6z-18X" userLabel="Extra Spacer">
+                                        <rect key="frame" x="0.0" y="34" width="296.5" height="50"/>
+                                        <fontDescription key="fontDescription" name="HiraMinProN-W3" family="Hiragino Mincho ProN" pointSize="20"/>
+                                        <nil key="textColor"/>
+                                        <nil key="highlightedColor"/>
+                                    </label>
+                                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="LA Campsite" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="bgK-W3-IPr">
+                                        <rect key="frame" x="0.0" y="94" width="296.5" height="20"/>
+                                        <fontDescription key="fontDescription" name="HiraMinProN-W3" family="Hiragino Mincho ProN" pointSize="20"/>
+                                        <nil key="textColor"/>
+                                        <nil key="highlightedColor"/>
+                                    </label>
+                                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Fetching Groups, please wait..." textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="z23-gO-7cH">
+                                        <rect key="frame" x="0.0" y="124" width="296.5" height="20"/>
+                                        <fontDescription key="fontDescription" name="HiraMinProN-W3" family="Hiragino Mincho ProN" pointSize="20"/>
+                                        <nil key="textColor"/>
+                                        <nil key="highlightedColor"/>
+                                    </label>
+                                    <slider opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" value="0.5" minValue="0.0" maxValue="1" translatesAutoresizingMaskIntoConstraints="NO" id="FGc-kF-HEw">
+                                        <rect key="frame" x="-2" y="154" width="300.5" height="31"/>
+                                        <connections>
+                                            <action selector="groupSlider:" destination="4dR-W0-s9t" eventType="valueChanged" id="v62-fX-pjU"/>
+                                        </connections>
+                                    </slider>
+                                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="" textAlignment="center" lineBreakMode="tailTruncation" numberOfLines="0" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="rMk-cV-IpF">
+                                        <rect key="frame" x="0.0" y="194" width="296.5" height="0.0"/>
+                                        <fontDescription key="fontDescription" name="HiraMinProN-W3" family="Hiragino Mincho ProN" pointSize="20"/>
+                                        <nil key="textColor"/>
+                                        <nil key="highlightedColor"/>
+                                    </label>
+                                </subviews>
+                            </stackView>
+                        </subviews>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                        <constraints>
+                            <constraint firstItem="sMG-50-1Uy" firstAttribute="centerX" secondItem="TSs-c3-zJl" secondAttribute="centerX" id="SSs-eL-0Zf"/>
+                            <constraint firstItem="sMG-50-1Uy" firstAttribute="centerY" secondItem="TSs-c3-zJl" secondAttribute="centerY" id="ZSl-zX-jqJ"/>
+                        </constraints>
                     </view>
+                    <connections>
+                        <outlet property="groupsSlider" destination="FGc-kF-HEw" id="BnD-Wm-agj"/>
+                        <outlet property="resultsLabel" destination="rMk-cV-IpF" id="QOd-qT-EIc"/>
+                        <outlet property="siteTitleLabel" destination="bgK-W3-IPr" id="LhQ-FI-SXC"/>
+                        <outlet property="totalGroupsLabel" destination="z23-gO-7cH" id="hs0-x3-XMi"/>
+                    </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="0cg-A7-wsb" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
