@@ -11,5 +11,5 @@ import Foundation
 struct GroupViewModel:Decodable {
 	let familyid:Int
 	let groupsize:Int
-	let caravan:Int
+	let caravan:AccomadationId
 }

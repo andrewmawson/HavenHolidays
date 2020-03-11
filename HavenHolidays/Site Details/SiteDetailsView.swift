@@ -42,8 +42,32 @@ class SiteDetailsView: UIViewController {
 			self.groupsSlider.maximumValue = Float(groupCount)
 			self.groupsSlider.minimumValue = Float(1)
 			self.totalGroupsLabel.text = "Group \(Int(self.groupsSlider.value)) of \(groupCount)"
-			self.resultsLabel.text = ""
+			self.resultsLabel.text = self.resultText()
 		}
+	}
+	
+	private func resultText() -> String {
+		if let currentGroup = groups?.groups[Int(self.groupsSlider.value) - 1] {
+			if let clockWiseMins = minutesToCaravan(for: Routes.clockWise, caravanId: currentGroup.caravan) {
+				return "Family \(currentGroup.familyid) took \(clockWiseMins) minutes\n\nRoute: Clockwise"
+			}
+			
+			if let antiClockWiseMins = minutesToCaravan(for: Routes.antiClockWise, caravanId: currentGroup.caravan) {
+				return "Family \(currentGroup.familyid) took \(antiClockWiseMins) minutes\n\nRoute: Anti clockwise"
+			}
+			
+			if let central = minutesToCaravan(for: Routes.central, caravanId: currentGroup.caravan) {
+				return "Family \(currentGroup.familyid) took \(central) minutes\n\nRoute: Central "
+			}
+		}
+		return "Unknown error"
+	}
+	
+	private func minutesToCaravan(for Route:Routes, caravanId:AccomadationId) -> Int? {
+		if let routeMins = site.routes[Route]?.firstIndex(of: caravanId) {
+			return routeMins + 1
+		}
+		return nil
 	}
 	
 	@IBAction func groupSlider(_ sender: UISlider) {

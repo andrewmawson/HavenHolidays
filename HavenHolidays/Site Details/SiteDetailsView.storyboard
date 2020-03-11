@@ -19,40 +19,40 @@
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
                             <stackView opaque="NO" contentMode="scaleToFill" axis="vertical" spacing="10" translatesAutoresizingMaskIntoConstraints="NO" id="sMG-50-1Uy">
-                                <rect key="frame" x="39.5" y="236.5" width="296.5" height="194"/>
+                                <rect key="frame" x="19" y="236.5" width="337.5" height="194"/>
                                 <subviews>
                                     <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Camp Supervisor" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="v9k-bw-0sZ">
-                                        <rect key="frame" x="0.0" y="0.0" width="296.5" height="24"/>
+                                        <rect key="frame" x="0.0" y="0.0" width="337.5" height="24"/>
                                         <fontDescription key="fontDescription" name="HiraMinProN-W3" family="Hiragino Mincho ProN" pointSize="24"/>
                                         <nil key="textColor"/>
                                         <nil key="highlightedColor"/>
                                     </label>
                                     <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="RIe-6z-18X" userLabel="Extra Spacer">
-                                        <rect key="frame" x="0.0" y="34" width="296.5" height="50"/>
+                                        <rect key="frame" x="0.0" y="34" width="337.5" height="50"/>
                                         <fontDescription key="fontDescription" name="HiraMinProN-W3" family="Hiragino Mincho ProN" pointSize="20"/>
                                         <nil key="textColor"/>
                                         <nil key="highlightedColor"/>
                                     </label>
                                     <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="LA Campsite" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="bgK-W3-IPr">
-                                        <rect key="frame" x="0.0" y="94" width="296.5" height="20"/>
+                                        <rect key="frame" x="0.0" y="94" width="337.5" height="20"/>
                                         <fontDescription key="fontDescription" name="HiraMinProN-W3" family="Hiragino Mincho ProN" pointSize="20"/>
                                         <nil key="textColor"/>
                                         <nil key="highlightedColor"/>
                                     </label>
                                     <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Fetching Groups, please wait..." textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="z23-gO-7cH">
-                                        <rect key="frame" x="0.0" y="124" width="296.5" height="20"/>
+                                        <rect key="frame" x="0.0" y="124" width="337.5" height="20"/>
                                         <fontDescription key="fontDescription" name="HiraMinProN-W3" family="Hiragino Mincho ProN" pointSize="20"/>
                                         <nil key="textColor"/>
                                         <nil key="highlightedColor"/>
                                     </label>
                                     <slider opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" value="0.5" minValue="0.0" maxValue="1" translatesAutoresizingMaskIntoConstraints="NO" id="FGc-kF-HEw">
-                                        <rect key="frame" x="-2" y="154" width="300.5" height="31"/>
+                                        <rect key="frame" x="-2" y="154" width="341.5" height="31"/>
                                         <connections>
                                             <action selector="groupSlider:" destination="4dR-W0-s9t" eventType="valueChanged" id="v62-fX-pjU"/>
                                         </connections>
                                     </slider>
                                     <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="" textAlignment="center" lineBreakMode="tailTruncation" numberOfLines="0" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="rMk-cV-IpF">
-                                        <rect key="frame" x="0.0" y="194" width="296.5" height="0.0"/>
+                                        <rect key="frame" x="0.0" y="194" width="337.5" height="0.0"/>
                                         <fontDescription key="fontDescription" name="HiraMinProN-W3" family="Hiragino Mincho ProN" pointSize="20"/>
                                         <nil key="textColor"/>
                                         <nil key="highlightedColor"/>
@@ -64,6 +64,7 @@
                         <constraints>
                             <constraint firstItem="sMG-50-1Uy" firstAttribute="centerX" secondItem="TSs-c3-zJl" secondAttribute="centerX" id="SSs-eL-0Zf"/>
                             <constraint firstItem="sMG-50-1Uy" firstAttribute="centerY" secondItem="TSs-c3-zJl" secondAttribute="centerY" id="ZSl-zX-jqJ"/>
+                            <constraint firstItem="sMG-50-1Uy" firstAttribute="width" secondItem="TSs-c3-zJl" secondAttribute="width" multiplier="0.9" id="wYF-j7-8dE"/>
                         </constraints>
                     </view>
                     <connections>
