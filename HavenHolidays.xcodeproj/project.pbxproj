@@ -22,7 +22,6 @@
 		01D4F4DB2419420D00A18803 /* SiteDetailsView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 01D4F4D52419420D00A18803 /* SiteDetailsView.swift */; };
 		01D4F4DC2419420D00A18803 /* SiteDetailsWireframe.swift in Sources */ = {isa = PBXBuildFile; fileRef = 01D4F4D62419420D00A18803 /* SiteDetailsWireframe.swift */; };
 		01D4F4DF2419425300A18803 /* SiteService.swift in Sources */ = {isa = PBXBuildFile; fileRef = 01D4F4DE2419425300A18803 /* SiteService.swift */; };
-		01D4F4E62419430B00A18803 /* SiteListView.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 01D4F4E02419430B00A18803 /* SiteListView.storyboard */; };
 		01D4F4E72419430B00A18803 /* SiteListPresenter.swift in Sources */ = {isa = PBXBuildFile; fileRef = 01D4F4E12419430B00A18803 /* SiteListPresenter.swift */; };
 		01D4F4E82419430B00A18803 /* SiteListProtocols.swift in Sources */ = {isa = PBXBuildFile; fileRef = 01D4F4E22419430B00A18803 /* SiteListProtocols.swift */; };
 		01D4F4E92419430B00A18803 /* SiteListInteractor.swift in Sources */ = {isa = PBXBuildFile; fileRef = 01D4F4E32419430B00A18803 /* SiteListInteractor.swift */; };
@@ -71,7 +70,6 @@
 		01D4F4D52419420D00A18803 /* SiteDetailsView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SiteDetailsView.swift; sourceTree = "<group>"; };
 		01D4F4D62419420D00A18803 /* SiteDetailsWireframe.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SiteDetailsWireframe.swift; sourceTree = "<group>"; };
 		01D4F4DE2419425300A18803 /* SiteService.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; name = SiteService.swift; path = HavenHolidays/Services/SiteService.swift; sourceTree = SOURCE_ROOT; };
-		01D4F4E02419430B00A18803 /* SiteListView.storyboard */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; path = SiteListView.storyboard; sourceTree = "<group>"; };
 		01D4F4E12419430B00A18803 /* SiteListPresenter.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SiteListPresenter.swift; sourceTree = "<group>"; };
 		01D4F4E22419430B00A18803 /* SiteListProtocols.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SiteListProtocols.swift; sourceTree = "<group>"; };
 		01D4F4E32419430B00A18803 /* SiteListInteractor.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SiteListInteractor.swift; sourceTree = "<group>"; };
@@ -165,7 +163,6 @@
 		01D4F4D0241941EE00A18803 /* Site List */ = {
 			isa = PBXGroup;
 			children = (
-				01D4F4E02419430B00A18803 /* SiteListView.storyboard */,
 				01D4F4E12419430B00A18803 /* SiteListPresenter.swift */,
 				01D4F4E22419430B00A18803 /* SiteListProtocols.swift */,
 				01D4F4E32419430B00A18803 /* SiteListInteractor.swift */,
@@ -312,7 +309,6 @@
 				01D4F4A1241941C800A18803 /* LaunchScreen.storyboard in Resources */,
 				01D4F49E241941C800A18803 /* Assets.xcassets in Resources */,
 				01D4F49C241941C700A18803 /* Main.storyboard in Resources */,
-				01D4F4E62419430B00A18803 /* SiteListView.storyboard in Resources */,
 				01D4F4D72419420D00A18803 /* SiteDetailsView.storyboard in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
