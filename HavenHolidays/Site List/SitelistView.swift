@@ -8,7 +8,7 @@
 
 import UIKit
 
-class SiteListView: UIViewController {
+class SiteListView: UITableViewController {
     //MARK: - Variables
     var presenter: SiteListPresenterProtocol?
     
