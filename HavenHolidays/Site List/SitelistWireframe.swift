@@ -1,5 +1,5 @@
 //
-//  SitelistWireframe.swift
+//  SiteListWireframe.swift
 //  HavenHolidays
 //
 //  Created by K10 on 11/03/2020.
@@ -7,14 +7,14 @@
 //
 import UIKit
 
-class SitelistWireframe:  SitelistWireframeProtocol {
-    static func createSitelistModule() -> UIViewController {
-        guard let view = UIStoryboard(name: "SitelistView", bundle: nil).instantiateViewController(withIdentifier: "SitelistView") as? SitelistView else {
+class SiteListWireframe:  SiteListWireframeProtocol {
+    static func createSiteListModule() -> UIViewController {
+        guard let view = UIStoryboard(name: "SiteListView", bundle: nil).instantiateViewController(withIdentifier: "SiteListView") as? SiteListView else {
             return UIViewController()
         }
-        let presenter: SitelistPresenterProtocol & SitelistInteractorOutputProtocol = SitelistPresenter()
-        let interactor: SitelistInteractorInputProtocol = SitelistInteractor()
-        let wireframe: SitelistWireframeProtocol = SitelistWireframe()
+        let presenter: SiteListPresenterProtocol & SiteListInteractorOutputProtocol = SiteListPresenter()
+        let interactor: SiteListInteractorInputProtocol = SiteListInteractor()
+        let wireframe: SiteListWireframeProtocol = SiteListWireframe()
         
         view.presenter = presenter
         presenter.view = view

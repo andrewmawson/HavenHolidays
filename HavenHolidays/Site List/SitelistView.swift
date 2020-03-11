@@ -1,5 +1,5 @@
 //
-//  SitelistView.swift
+//  SiteListView.swift
 //  HavenHolidays
 //
 //  Created by K10 on 11/03/2020.
@@ -8,9 +8,9 @@
 
 import UIKit
 
-class SitelistView: UIViewController {
+class SiteListView: UIViewController {
     //MARK: - Variables
-    var presenter: SitelistPresenterProtocol?
+    var presenter: SiteListPresenterProtocol?
     
     //MARK: - LifeCycle
     override func viewDidLoad() {
@@ -18,10 +18,10 @@ class SitelistView: UIViewController {
     }
 }
 
-extension SitelistView {
+extension SiteListView {
 	//MARK: - IBActions
 }
 
-extension SitelistView: SitelistViewProtocol {
+extension SiteListView: SiteListViewProtocol {
     
 }

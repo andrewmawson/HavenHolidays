@@ -1,5 +1,5 @@
 //
-//  SitelistProtocols.swift
+//  SiteListProtocols.swift
 //  HavenHolidays
 //
 //  Created by K10 on 11/03/2020.
@@ -7,23 +7,23 @@
 //
 import UIKit
 
-protocol SitelistViewProtocol: class {
+protocol SiteListViewProtocol: class {
     
 }
 
-protocol SitelistPresenterProtocol: class {
-    var view: SitelistViewProtocol? { get set }
-    var interactor: SitelistInteractorInputProtocol? { get set }
-    var wireframe: SitelistWireframeProtocol? { get set }
+protocol SiteListPresenterProtocol: class {
+    var view: SiteListViewProtocol? { get set }
+    var interactor: SiteListInteractorInputProtocol? { get set }
+    var wireframe: SiteListWireframeProtocol? { get set }
 }
 
-protocol SitelistInteractorInputProtocol: class {
-    var presenter: SitelistInteractorOutputProtocol? { get set }
+protocol SiteListInteractorInputProtocol: class {
+    var presenter: SiteListInteractorOutputProtocol? { get set }
 }
 
-protocol SitelistInteractorOutputProtocol: class {
+protocol SiteListInteractorOutputProtocol: class {
 }
 
-protocol SitelistWireframeProtocol: class {
-    static func createSitelistModule() -> UIViewController
+protocol SiteListWireframeProtocol: class {
+    static func createSiteListModule() -> UIViewController
 }
