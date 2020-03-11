@@ -28,7 +28,6 @@ class SiteDetailsView: UIViewController {
 		super.viewDidLoad()
 		assert(site != nil, "Site must not be nil")
 		presenter?.interactor?.getGroup(forSite: site)
-		configureResults()
 	}
 	
 	private func configureResults() {
@@ -37,42 +36,16 @@ class SiteDetailsView: UIViewController {
 			guard let groupsViewModel = self.groups else {
 				return
 			}
-			
+			let currentGroup = Int(self.groupsSlider.value - 1)
 			let groupCount = groupsViewModel.groups.count
 			self.groupsSlider.maximumValue = Float(groupCount)
 			self.groupsSlider.minimumValue = Float(1)
-			self.totalGroupsLabel.text = "Group \(Int(self.groupsSlider.value)) of \(groupCount)"
-			self.resultsLabel.text = self.resultText()
+			self.totalGroupsLabel.text = "Group \(currentGroup + 1) of \(groupCount)"
+			let routeInfo = self.site.routeInfo(forGroups: groupsViewModel)[currentGroup]
+			self.resultsLabel.text = routeInfo.displayText()
 		}
 	}
-	
-	// TO DO: Move recursive mins for each group until current croupt
-	
-	private func resultText() -> String {
-		// TO DO: Move this to View model
-		if let currentGroup = groups?.groups[Int(self.groupsSlider.value) - 1] {
-			if let clockWiseMins = minutesToCaravan(for: Routes.clockWise, caravanId: currentGroup.caravan) {
-				return "Family \(currentGroup.familyid) took \(clockWiseMins) minutes\n\nRoute: Clockwise"
-			}
-			
-			if let antiClockWiseMins = minutesToCaravan(for: Routes.antiClockWise, caravanId: currentGroup.caravan) {
-				return "Family \(currentGroup.familyid) took \(antiClockWiseMins) minutes\n\nRoute: Anti clockwise"
-			}
-			
-			if let central = minutesToCaravan(for: Routes.central, caravanId: currentGroup.caravan) {
-				return "Family \(currentGroup.familyid) took \(central) minutes\n\nRoute: Central "
-			}
-		}
-		return "Unknown error"
-	}
-	
-	private func minutesToCaravan(for Route:Routes, caravanId:CaravanId) -> Int? {
-		// TO DO: Move this to View model
-		if let routeMins = site.routes[Route]?.firstIndex(of: caravanId) {
-			return routeMins + 1
-		}
-		return nil
-	}
+
 	
 	@IBAction func groupSlider(_ sender: UISlider) {
 		print(Int(sender.value))

@@ -10,5 +10,9 @@ import Foundation
 
 struct RouteInfoViewModel {
 	let minutesWait:Int
-	let routeTake:Routes
+	let routeTaken:Routes
+	
+	func displayText() -> String {
+		return "Minutes Wait: \(minutesWait)\nRoute: \(routeTaken)"
+	}
 }
