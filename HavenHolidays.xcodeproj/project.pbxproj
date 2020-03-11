@@ -30,6 +30,7 @@
 		01D4F4EB2419430B00A18803 /* SiteListWireframe.swift in Sources */ = {isa = PBXBuildFile; fileRef = 01D4F4E52419430B00A18803 /* SiteListWireframe.swift */; };
 		01D4F4EE2419440500A18803 /* SiteViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 01D4F4ED2419440500A18803 /* SiteViewModel.swift */; };
 		01D4F4F12419446100A18803 /* GroupViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 01D4F4F02419446100A18803 /* GroupViewModel.swift */; };
+		01E19C5824194D7D0096ADAE /* NetworkService.swift in Sources */ = {isa = PBXBuildFile; fileRef = 01E19C5724194D7D0096ADAE /* NetworkService.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -79,6 +80,7 @@
 		01D4F4E52419430B00A18803 /* SiteListWireframe.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SiteListWireframe.swift; sourceTree = "<group>"; };
 		01D4F4ED2419440500A18803 /* SiteViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SiteViewModel.swift; sourceTree = "<group>"; };
 		01D4F4F02419446100A18803 /* GroupViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = GroupViewModel.swift; sourceTree = "<group>"; };
+		01E19C5724194D7D0096ADAE /* NetworkService.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NetworkService.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -192,6 +194,7 @@
 			isa = PBXGroup;
 			children = (
 				01D4F4DE2419425300A18803 /* SiteService.swift */,
+				01E19C5724194D7D0096ADAE /* NetworkService.swift */,
 			);
 			path = Services;
 			sourceTree = "<group>";
@@ -343,6 +346,7 @@
 				01D4F4E82419430B00A18803 /* SiteListProtocols.swift in Sources */,
 				01D4F4DF2419425300A18803 /* SiteService.swift in Sources */,
 				01D4F4DB2419420D00A18803 /* SiteDetailsView.swift in Sources */,
+				01E19C5824194D7D0096ADAE /* NetworkService.swift in Sources */,
 				01D4F495241941C700A18803 /* AppDelegate.swift in Sources */,
 				01D4F4D92419420D00A18803 /* SiteDetailsProtocols.swift in Sources */,
 				01D4F4DA2419420D00A18803 /* SiteDetailsInteractor.swift in Sources */,

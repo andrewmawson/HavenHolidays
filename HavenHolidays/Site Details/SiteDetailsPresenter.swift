@@ -12,5 +12,9 @@ class SiteDetailsPresenter: SiteDetailsPresenterProtocol {
 }
 
 extension SiteDetailsPresenter: SiteDetailsInteractorOutputProtocol {
+	func has(groups: [GroupViewModel]) {
+		view?.display(groups: groups)
+	}
+	
     
 }

@@ -8,7 +8,7 @@
 import UIKit
 
 protocol SiteDetailsViewProtocol: class {
-    
+    	func display(groups:[GroupViewModel])
 }
 
 protocol SiteDetailsPresenterProtocol: class {
@@ -19,9 +19,11 @@ protocol SiteDetailsPresenterProtocol: class {
 
 protocol SiteDetailsInteractorInputProtocol: class {
     var presenter: SiteDetailsInteractorOutputProtocol? { get set }
+	func getGroup(forSite site:SiteViewModel)
 }
 
 protocol SiteDetailsInteractorOutputProtocol: class {
+	func has(groups:[GroupViewModel])
 }
 
 protocol SiteDetailsWireframeProtocol: class {

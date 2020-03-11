@@ -10,9 +10,17 @@ import Foundation
 
 class SiteService {
 	private var sites:[SiteViewModel] = []
+	let networkService = NetworkService()
 	
 	func getSites() -> [SiteViewModel] {
 		return self.sites.count == 0 ? createSites() : self.sites
+	}
+	
+	func getGroups(forSite site:SiteViewModel, completionBlock:@escaping( ([GroupViewModel]?) -> () )) {
+		networkService.getGroupData(withUrl: site.dataURL) { (groups) in
+			completionBlock(groups)
+		}
+		return completionBlock(nil)
 	}
 	
 	private func createSites() -> [SiteViewModel] {

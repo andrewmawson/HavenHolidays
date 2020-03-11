@@ -12,12 +12,12 @@ class SiteDetailsView: UIViewController {
     //MARK: - Variables
     var presenter: SiteDetailsPresenterProtocol?
 	var site:SiteViewModel!
-	
+	private var groups:[GroupViewModel] = []
     //MARK: - LifeCycle
     override func viewDidLoad() {
         super.viewDidLoad()
 		assert(site != nil, "Site must not be nil")
-		print(site!)
+		presenter?.interactor?.getGroup(forSite: site)
     }
 }
 
@@ -26,5 +26,8 @@ extension SiteDetailsView {
 }
 
 extension SiteDetailsView: SiteDetailsViewProtocol {
-    
+	func display(groups: [GroupViewModel]) {
+		self.groups = groups
+		print(groups)
+	}
 }

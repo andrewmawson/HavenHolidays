@@ -8,7 +8,7 @@
 
 import Foundation
 
-struct GroupViewModel {
+struct GroupViewModel:Decodable {
 	let familyid:Int
 	let groupsize:Int
 	let caravan:Int
