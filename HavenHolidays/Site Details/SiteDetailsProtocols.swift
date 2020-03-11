@@ -25,5 +25,5 @@ protocol SiteDetailsInteractorOutputProtocol: class {
 }
 
 protocol SiteDetailsWireframeProtocol: class {
-    static func createSiteDetailsModule() -> UIViewController
+	static func createSiteDetailsModule(withSite site:SiteViewModel) -> UIViewController
 }

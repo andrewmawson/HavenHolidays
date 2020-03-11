@@ -11,10 +11,13 @@ import UIKit
 class SiteDetailsView: UIViewController {
     //MARK: - Variables
     var presenter: SiteDetailsPresenterProtocol?
-    
+	var site:SiteViewModel!
+	
     //MARK: - LifeCycle
     override func viewDidLoad() {
         super.viewDidLoad()
+		assert(site != nil, "Site must not be nil")
+		print(site!)
     }
 }
 

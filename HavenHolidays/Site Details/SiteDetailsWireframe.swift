@@ -8,7 +8,7 @@
 import UIKit
 
 class SiteDetailsWireframe:  SiteDetailsWireframeProtocol {
-    static func createSiteDetailsModule() -> UIViewController {
+	static func createSiteDetailsModule(withSite site:SiteViewModel) -> UIViewController {
         guard let view = UIStoryboard(name: "SiteDetailsView", bundle: nil).instantiateViewController(withIdentifier: "SiteDetailsView") as? SiteDetailsView else {
             return UIViewController()
         }
@@ -17,6 +17,7 @@ class SiteDetailsWireframe:  SiteDetailsWireframeProtocol {
         let wireframe: SiteDetailsWireframeProtocol = SiteDetailsWireframe()
         
         view.presenter = presenter
+		view.site = site
         presenter.view = view
         presenter.interactor = interactor
         presenter.wireframe = wireframe
