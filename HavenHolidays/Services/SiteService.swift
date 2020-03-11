@@ -16,7 +16,7 @@ class SiteService {
 		return self.sites.count == 0 ? createSites() : self.sites
 	}
 	
-	func getGroups(forSite site:SiteViewModel, completionBlock:@escaping( ([GroupViewModel]?) -> () )) {
+	func getGroups(forSite site:SiteViewModel, completionBlock:@escaping( (GroupsViewModel?) -> () )) {
 		networkService.getGroupData(withUrl: site.dataURL) { (groups) in
 			completionBlock(groups)
 		}

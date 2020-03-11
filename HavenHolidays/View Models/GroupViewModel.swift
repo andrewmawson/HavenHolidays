@@ -8,6 +8,10 @@
 
 import Foundation
 
+struct GroupsViewModel {
+	let groups:[GroupViewModel]
+}
+
 struct GroupViewModel:Decodable {
 	let familyid:Int
 	let groupsize:Int

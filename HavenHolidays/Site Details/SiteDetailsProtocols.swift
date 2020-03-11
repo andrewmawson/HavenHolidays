@@ -8,7 +8,7 @@
 import UIKit
 
 protocol SiteDetailsViewProtocol: class {
-    	func display(groups:[GroupViewModel])
+	func display(groups:GroupsViewModel)
 }
 
 protocol SiteDetailsPresenterProtocol: class {
@@ -23,7 +23,7 @@ protocol SiteDetailsInteractorInputProtocol: class {
 }
 
 protocol SiteDetailsInteractorOutputProtocol: class {
-	func has(groups:[GroupViewModel])
+	func has(groups:GroupsViewModel)
 }
 
 protocol SiteDetailsWireframeProtocol: class {
