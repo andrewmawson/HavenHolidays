@@ -45,7 +45,7 @@
                                         <nil key="textColor"/>
                                         <nil key="highlightedColor"/>
                                     </label>
-                                    <slider opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" value="0.5" minValue="0.0" maxValue="1" translatesAutoresizingMaskIntoConstraints="NO" id="FGc-kF-HEw">
+                                    <slider opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" value="1" minValue="1" maxValue="1" translatesAutoresizingMaskIntoConstraints="NO" id="FGc-kF-HEw">
                                         <rect key="frame" x="-2" y="154" width="341.5" height="31"/>
                                         <connections>
                                             <action selector="groupSlider:" destination="4dR-W0-s9t" eventType="valueChanged" id="v62-fX-pjU"/>
