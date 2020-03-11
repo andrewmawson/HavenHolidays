@@ -12,7 +12,7 @@ class RootViewController: UIViewController {
 
 	override func viewDidAppear(_ animated: Bool) {
 		super.viewDidAppear(animated)
-		let siteList = SiteListWireframe.createSitelistModule()
+		let siteList = SiteListWireframe.createSiteListModule()
 		navigationController?.setViewControllers([siteList], animated: false)
 	}
 
