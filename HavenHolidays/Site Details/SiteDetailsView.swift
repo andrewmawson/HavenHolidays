@@ -28,6 +28,7 @@ class SiteDetailsView: UIViewController {
 		super.viewDidLoad()
 		assert(site != nil, "Site must not be nil")
 		presenter?.interactor?.getGroup(forSite: site)
+		configureResults()
 	}
 	
 	private func configureResults() {
@@ -36,25 +37,29 @@ class SiteDetailsView: UIViewController {
 			guard let groupsViewModel = self.groups else {
 				return
 			}
-			let currentGroup = Int(self.groupsSlider.value - 1)
+			
+			let currentGroupIndex = Int(self.groupsSlider.value - 1)
 			let groupCount = groupsViewModel.groups.count
+			
 			self.groupsSlider.maximumValue = Float(groupCount)
 			self.groupsSlider.minimumValue = Float(1)
-			self.totalGroupsLabel.text = "Group \(currentGroup + 1) of \(groupCount)"
-			let routeInfo = self.site.routeInfo(forGroups: groupsViewModel)[currentGroup]
+			
+			self.totalGroupsLabel.text = "Group \(currentGroupIndex + 1) of \(groupCount)"
+			
+			//TODO: Potential performce hit to create routeInfo if there were 1,000, but is ok for now.
+			let routeInfo = self.site.routeInfo(forGroups: groupsViewModel)[currentGroupIndex]
 			self.resultsLabel.text = routeInfo.displayText()
 		}
 	}
 
-	
-	@IBAction func groupSlider(_ sender: UISlider) {
-		print(Int(sender.value))
-		configureResults()
-	}
+
 }
 
 extension SiteDetailsView {
 	//MARK: - IBActions
+	@IBAction func groupSlider(_ sender: UISlider) {
+		configureResults()
+	}
 }
 
 extension SiteDetailsView: SiteDetailsViewProtocol {

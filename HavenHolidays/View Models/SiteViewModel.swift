@@ -16,15 +16,15 @@ struct SiteViewModel {
 	let routes:[Routes:[CaravanId]]
 	
 	func routeInfo(forGroups groups:GroupsViewModel) -> [RouteInfoViewModel] {
-		var allRouteInfo:[RouteInfoViewModel] = []
+		var routeInfoViewModel:[RouteInfoViewModel] = []
 		var totalMins = 0
 		
-		for (_ /*index*/, group) in groups.groups.enumerated() {
-			let routeInfo = RouteInfoViewModel(minutesWait: totalMins, routeTaken: routeFor(caravanId: group.caravan))
-			allRouteInfo.append(routeInfo)
+		for group in groups.groups {
+			let newRouteInfo = RouteInfoViewModel(minutesWait: totalMins, routeTaken: routeFor(caravanId: group.caravan))
+			routeInfoViewModel.append(newRouteInfo)
 			totalMins = totalMins + minutesToCaravan(caravanId: group.caravan)
 		}
-		return allRouteInfo
+		return routeInfoViewModel
 	}
 	
 	private func routeFor(caravanId:CaravanId) -> Routes {
