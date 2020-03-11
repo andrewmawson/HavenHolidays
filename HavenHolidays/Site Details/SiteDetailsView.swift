@@ -46,7 +46,10 @@ class SiteDetailsView: UIViewController {
 		}
 	}
 	
+	// TO DO: Move recursive mins for each group until current croupt
+	
 	private func resultText() -> String {
+		// TO DO: Move this to View model
 		if let currentGroup = groups?.groups[Int(self.groupsSlider.value) - 1] {
 			if let clockWiseMins = minutesToCaravan(for: Routes.clockWise, caravanId: currentGroup.caravan) {
 				return "Family \(currentGroup.familyid) took \(clockWiseMins) minutes\n\nRoute: Clockwise"
@@ -64,6 +67,7 @@ class SiteDetailsView: UIViewController {
 	}
 	
 	private func minutesToCaravan(for Route:Routes, caravanId:AccomadationId) -> Int? {
+		// TO DO: Move this to View model
 		if let routeMins = site.routes[Route]?.firstIndex(of: caravanId) {
 			return routeMins + 1
 		}
