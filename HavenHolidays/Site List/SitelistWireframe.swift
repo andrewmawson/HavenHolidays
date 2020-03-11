@@ -24,5 +24,10 @@ class SiteListWireframe:  SiteListWireframeProtocol {
         
         return view
     }
+	
+	func showSiteDetails(from view: SiteListView, site:SiteViewModel) {
+		let details = SiteDetailsWireframe.createSiteDetailsModule()
+		view.show(details, sender: self)
+	}
     
 }

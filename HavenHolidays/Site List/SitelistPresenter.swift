@@ -12,5 +12,9 @@ class SiteListPresenter: SiteListPresenterProtocol {
 }
 
 extension SiteListPresenter: SiteListInteractorOutputProtocol {
+	func hasSites(sites: [SiteViewModel]) {
+		view?.display(sites: sites)
+	}
+	
     
 }

@@ -8,7 +8,7 @@
 import UIKit
 
 protocol SiteListViewProtocol: class {
-    
+	func display(sites:[SiteViewModel])
 }
 
 protocol SiteListPresenterProtocol: class {
@@ -19,11 +19,14 @@ protocol SiteListPresenterProtocol: class {
 
 protocol SiteListInteractorInputProtocol: class {
     var presenter: SiteListInteractorOutputProtocol? { get set }
+	func getSites()
 }
 
 protocol SiteListInteractorOutputProtocol: class {
+	func hasSites(sites:[SiteViewModel])
 }
 
 protocol SiteListWireframeProtocol: class {
     static func createSiteListModule() -> UIViewController
+	func showSiteDetails(from view: SiteListView, site:SiteViewModel)
 }

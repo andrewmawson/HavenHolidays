@@ -7,5 +7,11 @@
 //
 
 class SiteListInteractor: SiteListInteractorInputProtocol {
+	private let siteService = SiteService()
+	func getSites() {
+		let sites = siteService.getSites()
+		presenter?.hasSites(sites: sites)
+	}
+	
     weak var presenter: SiteListInteractorOutputProtocol?
 }
