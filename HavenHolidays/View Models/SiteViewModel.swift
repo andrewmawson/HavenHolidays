@@ -7,8 +7,15 @@
 //
 
 import Foundation
-
+typealias AccomadationId = Int
 struct SiteViewModel {
 	let title:String
 	let dataURL:URL
+	let routes:[Routes:[AccomadationId]]
+}
+
+enum Routes {
+	case clockWise
+	case antiClockWise
+	case central
 }

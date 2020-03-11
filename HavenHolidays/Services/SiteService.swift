@@ -24,10 +24,19 @@ class SiteService {
 	}
 	
 	private func createSites() -> [SiteViewModel] {
-		let laUrl = URL(string:  "https://haven-tech-test.s3-eu-west-1.amazonaws.com/tech+test+json.json")!
-		let losAngeles = SiteViewModel(title: "Los Angeles", dataURL:laUrl )
-		self.sites = [losAngeles]
+		self.sites = [losAngelesSite()]
 		return self.sites
+	}
+	
+	private func losAngelesSite() -> SiteViewModel {
+		let laUrl = URL(string:  "https://haven-tech-test.s3-eu-west-1.amazonaws.com/tech+test+json.json")!
+		let routes = [
+			Routes.antiClockWise:[1,2,3,4,5,6,7],
+			Routes.clockWise:[1,13,12,11,10,9],
+			Routes.central:[1,13,16,15,14,8]
+		]
+		let losAngeles = SiteViewModel(title: "Los Angeles", dataURL:laUrl, routes: routes )
+		return losAngeles
 	}
 	
 	
