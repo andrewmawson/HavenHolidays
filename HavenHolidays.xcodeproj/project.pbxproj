@@ -8,6 +8,7 @@
 
 /* Begin PBXBuildFile section */
 		0153D6DC24194755004F3247 /* SiteListView.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 0153D6DB24194755004F3247 /* SiteListView.storyboard */; };
+		01984EBA24197FA000A5F1F4 /* RouteInfoViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 01984EB924197FA000A5F1F4 /* RouteInfoViewModel.swift */; };
 		01D4F495241941C700A18803 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 01D4F494241941C700A18803 /* AppDelegate.swift */; };
 		01D4F497241941C700A18803 /* SceneDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 01D4F496241941C700A18803 /* SceneDelegate.swift */; };
 		01D4F499241941C700A18803 /* RootViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 01D4F498241941C700A18803 /* RootViewController.swift */; };
@@ -53,6 +54,7 @@
 
 /* Begin PBXFileReference section */
 		0153D6DB24194755004F3247 /* SiteListView.storyboard */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.storyboard; path = SiteListView.storyboard; sourceTree = "<group>"; };
+		01984EB924197FA000A5F1F4 /* RouteInfoViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RouteInfoViewModel.swift; sourceTree = "<group>"; };
 		01D4F491241941C700A18803 /* HavenHolidays.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = HavenHolidays.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		01D4F494241941C700A18803 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		01D4F496241941C700A18803 /* SceneDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SceneDelegate.swift; sourceTree = "<group>"; };
@@ -207,6 +209,7 @@
 				01D4F4ED2419440500A18803 /* SiteViewModel.swift */,
 				01D4F4F02419446100A18803 /* GroupViewModel.swift */,
 				01E19C592419527C0096ADAE /* GroupsViewModel.swift */,
+				01984EB924197FA000A5F1F4 /* RouteInfoViewModel.swift */,
 			);
 			path = "View Models";
 			sourceTree = "<group>";
@@ -355,6 +358,7 @@
 				01D4F4D92419420D00A18803 /* SiteDetailsProtocols.swift in Sources */,
 				01D4F4DA2419420D00A18803 /* SiteDetailsInteractor.swift in Sources */,
 				01D4F4F12419446100A18803 /* GroupViewModel.swift in Sources */,
+				01984EBA24197FA000A5F1F4 /* RouteInfoViewModel.swift in Sources */,
 				01D4F497241941C700A18803 /* SceneDelegate.swift in Sources */,
 				01D4F4EE2419440500A18803 /* SiteViewModel.swift in Sources */,
 				01D4F4DC2419420D00A18803 /* SiteDetailsWireframe.swift in Sources */,
