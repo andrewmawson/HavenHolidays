@@ -35,7 +35,7 @@ class SiteService {
 			Routes.clockWise:[1,13,12,11,10,9],
 			Routes.central:[1,13,16,15,14,8]
 		]
-		let losAngeles = SiteViewModel(title: "Los Angeles", dataURL:laUrl, routes: routes )
+		let losAngeles = SiteViewModel(title: "Lost Angeles!", dataURL:laUrl, routes: routes )
 		return losAngeles
 	}
 	
